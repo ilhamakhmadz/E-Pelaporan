@@ -196,7 +196,7 @@ export const LeafletMap: React.FC<LeafletMapProps> = ({
         onLoadEnd={() => setMapLoaded(true)}
         javaScriptEnabled={true}
         domStorageEnabled={true}
-        scrollEnabled={false}
+        scrollEnabled={true}
       />
     </View>
   );
