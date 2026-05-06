@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#111c2d",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f0f3ff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#75fbbb",
+                        "primary": "#006767",
+                        "surface": "#f9f9ff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-container-highest": "#d8e3fb",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "inverse-primary": "#78d6d5",
+                        "surface-dim": "#cfdaf2",
+                        "surface-bright": "#f9f9ff",
+                        "primary-fixed": "#95f2f1",
+                        "tertiary-container": "#727577",
+                        "primary-container": "#0f8282",
+                        "on-secondary-fixed-variant": "#005235",
+                        "outline": "#6e7979",
+                        "surface-variant": "#d8e3fb",
+                        "secondary-fixed": "#75fbbb",
+                        "on-surface": "#111c2d",
+                        "outline-variant": "#bdc9c8",
+                        "on-primary-fixed-variant": "#004f50",
+                        "on-secondary-container": "#00734c",
+                        "tertiary": "#595c5e",
+                        "inverse-on-surface": "#ecf1ff",
+                        "inverse-surface": "#263143",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#dee8ff",
+                        "on-surface-variant": "#3e4949",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#55dea1",
+                        "background": "#f9f9ff",
+                        "on-primary-container": "#f3fffe",
+                        "secondary": "#006c47",
+                        "primary-fixed-dim": "#78d6d5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#002020",
+                        "surface-container": "#e7eeff",
+                        "on-tertiary-container": "#fbfdff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-tint": "#006a6a",
+                        "on-secondary-fixed": "#002113"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "container-padding": "20px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "grid-columns": "4"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "title-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9ff;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center justify-center">
+<!-- Top Decorative Illustration Section -->
+<div class="w-full max-w-md px-container-padding flex flex-col items-center">
+<div class="relative w-full aspect-video mb-lg overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(32,138,138,0.1)]">
+<img class="w-full h-full object-cover" data-alt="A highly detailed 3D digital illustration of a futuristic, sustainable mining site in Bandung Regency. The scene features clean energy machinery and drones operating in a lush, green valley under bright, high-key morning light. The visual style is minimal and premium, utilizing a color palette of Primary Emerald and soft whites to convey high-tech efficiency and ecological oversight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6ZVrXxof-jWOLXP0dkfmr2pLIGrnFrPp_ePdto5MXoZ6b1Fqfwrnvao0TkG9NoS0iWta0J41n6xHi3gw5Ff6IrZrwk-EbILuQ0y8zNdCElNH4RHRihyX2ffEJpY3crY1z3XnTO-XGs1FEAFSxFwbK5esuxr1FiLjOUYa7kPcvZQFnclRhdyy13sz199V9FgMZAjknPwfBRoFJaQGV3SlFB-huMkNgRi3aDtR1_KGrGbbMkzWuCFPfvCb8te-QkYYK0ker-3aUvaI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+<div class="text-center mb-xl">
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight">Portal Petugas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Akses sistem pengawasan pertambangan terpadu.</p>
+</div>
+<!-- Login Form Canvas -->
+<div class="w-full space-y-md">
+<!-- Username Input -->
+<div class="relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-12 pr-4 shadow-[0_8px_30px_rgba(0,0,0,0.02)] focus:ring-2 focus:ring-primary/20 text-on-surface font-body-md transition-all outline-none" placeholder="Username atau NIP" type="text"/>
+</div>
+<!-- Password Input -->
+<div class="relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-12 pr-4 shadow-[0_8px_30px_rgba(0,0,0,0.02)] focus:ring-2 focus:ring-primary/20 text-on-surface font-body-md transition-all outline-none" placeholder="Kata Sandi" type="password"/>
+<div class="absolute inset-y-0 right-4 flex items-center text-outline cursor-pointer">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</div>
+</div>
+<!-- Forgot Password -->
+<div class="flex justify-end px-xs">
+<a class="font-label-caps text-label-caps text-primary hover:text-primary-container transition-colors" href="#">Lupa Password</a>
+</div>
+<!-- Login Button -->
+<button class="w-full mt-lg relative group overflow-hidden rounded-full p-[1px] focus:outline-none">
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:opacity-90"></div>
+<div class="relative flex items-center justify-center py-4 glass-panel rounded-full transition-transform active:scale-95">
+<span class="font-title-sm text-title-sm text-primary group-hover:text-primary-container">Masuk ke Dashboard</span>
+</div>
+</button>
+</div>
+<!-- Secondary Actions -->
+<div class="mt-xl text-center">
+<p class="font-body-md text-body-md text-on-surface-variant/60">Belum memiliki akun akses?</p>
+<button class="mt-xs font-label-caps text-label-caps text-outline hover:text-primary transition-colors">HUBUNGI ADMINISTRATOR</button>
+</div>
+<!-- Brand Footer -->
+<div class="mt-auto pt-xl pb-md flex items-center gap-xs opacity-40 grayscale">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+<p class="font-label-caps text-label-caps tracking-widest">KABUPATEN BANDUNG • 2024</p>
+</div>
+</div>
+<!-- Soft Ambient Background Glows -->
+<div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary/5 blur-[120px] rounded-full -z-10"></div>
+</body></html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#111c2d",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f0f3ff",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#75fbbb",
+                    "primary": "#006767",
+                    "surface": "#f9f9ff",
+                    "tertiary-fixed": "#e0e3e5",
+                    "surface-container-highest": "#d8e3fb",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "inverse-primary": "#78d6d5",
+                    "surface-dim": "#cfdaf2",
+                    "surface-bright": "#f9f9ff",
+                    "primary-fixed": "#95f2f1",
+                    "tertiary-container": "#727577",
+                    "primary-container": "#0f8282",
+                    "on-secondary-fixed-variant": "#005235",
+                    "outline": "#6e7979",
+                    "surface-variant": "#d8e3fb",
+                    "secondary-fixed": "#75fbbb",
+                    "on-surface": "#111c2d",
+                    "outline-variant": "#bdc9c8",
+                    "on-primary-fixed-variant": "#004f50",
+                    "on-secondary-container": "#00734c",
+                    "tertiary": "#595c5e",
+                    "inverse-on-surface": "#ecf1ff",
+                    "inverse-surface": "#263143",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#dee8ff",
+                    "on-surface-variant": "#3e4949",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#55dea1",
+                    "background": "#f9f9ff",
+                    "on-primary-container": "#f3fffe",
+                    "secondary": "#006c47",
+                    "primary-fixed-dim": "#78d6d5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#002020",
+                    "surface-container": "#e7eeff",
+                    "on-tertiary-container": "#fbfdff",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-tint": "#006a6a",
+                    "on-secondary-fixed": "#002113"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "32px",
+                    "container-padding": "20px",
+                    "sm": "12px",
+                    "md": "16px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "lg": "24px",
+                    "grid-columns": "4"
+            },
+            "fontFamily": {
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "title-sm": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .topo-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100C50 120 80 80 150 100S250 150 300 120S400 100 400 100V400H0V100Z' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cpath d='M0 150C60 170 100 130 180 150S280 200 350 170S400 150 400 150' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.5'/%3E%3Cpath d='M0 200C70 220 120 180 210 200S310 250 400 220' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background overflow-hidden">
+<!-- Splash Screen Container -->
+<main class="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#208a8a] via-primary to-[#0db077]">
+<!-- Topographic Pattern Overlay -->
+<div class="absolute inset-0 topo-pattern opacity-40 mix-blend-overlay"></div>
+<!-- Ambient Glow Effects -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary-container opacity-20 blur-[120px] rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-fixed opacity-30 blur-[120px] rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white opacity-5 blur-[150px] rounded-full"></div>
+<!-- Content Canvas -->
+<div class="relative z-10 flex flex-col items-center px-container-padding text-center">
+<!-- Logo Container with Glassmorphism -->
+<div class="mb-lg p-xl rounded-[40px] bg-white/10 backdrop-blur-3xl border border-white/20 shadow-[0_32px_64px_rgba(32,138,138,0.3)] group transition-all duration-500 hover:scale-105">
+<div class="relative w-24 h-24 flex items-center justify-center">
+<!-- Glow behind icon -->
+<div class="absolute inset-0 bg-secondary-fixed opacity-40 blur-2xl rounded-full animate-pulse"></div>
+<!-- Icon -->
+<span class="material-symbols-outlined text-[64px] text-white relative z-10" data-icon="mining" style="font-variation-settings: 'FILL' 1;">manufacturing</span>
+</div>
+</div>
+<!-- Title & Branding -->
+<div class="space-y-sm max-w-sm">
+<h1 class="font-display-lg text-display-lg text-white leading-tight tracking-tight">
+                    Sistem Pelaporan Pertambangan
+                </h1>
+<div class="inline-flex items-center gap-xs px-md py-xs rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+<span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-[0.2em]">
+                        Kabupaten Bandung
+                    </span>
+</div>
+</div>
+<!-- Loading Indicator / Subtext -->
+<div class="mt-xl flex flex-col items-center gap-md">
+<div class="w-48 h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-secondary-fixed shadow-[0_0_12px_#75fbbb] rounded-full"></div>
+</div>
+<p class="font-body-md text-body-md text-white/60">
+                    Mengamankan data pengawasan industri...
+                </p>
+</div>
+</div>
+<!-- Footer Identity -->
+<div class="absolute bottom-xl left-0 right-0 flex flex-col items-center gap-xs">
+<div class="flex items-center gap-sm">
+<img alt="Bandung Regency Emblem" class="w-6 h-6 grayscale brightness-200 opacity-60" data-alt="A stylized professional government emblem of Bandung Regency, presented in a minimalist high-contrast white aesthetic. The logo is clean and authoritative, fitting for a modern digital administrative tool. It sits discreetly at the bottom of a futuristic interface against a deep emerald and tosca gradient background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHgT5H89BKEPV2duE-YjRbV-kRxaXFpF5pmK8uao_fcfZ8biu1SdaL9n7IKofJOAp_yYSMl3kcEy52m7GnVWBqsD3-CzzAHFVGQg5k-3Ft5SAr0tMMC1nX2qPwPOwfJJhMJMj9M7qi4M3dOdvhxUzVs_e5HYSMWOqF9yGmjeVNgQgN1RpGB5nsixYp9dNbwdKeG1FRzrSoKmwtM9Xv3MsCouwjdje-5Qlo3n-vm_F9EBGX_QUtJmI1olz3OF-BiHUy9D2cwNFgPGM"/>
+<span class="font-label-caps text-label-caps text-white/40">Dinas Energi dan Sumber Daya Mineral</span>
+</div>
+</div>
+<!-- Decorative Floating Elements -->
+<div class="absolute inset-0 pointer-events-none">
+<!-- Glass Card Accents -->
+<div class="absolute top-[20%] right-[10%] w-32 h-32 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm -rotate-12"></div>
+<div class="absolute bottom-[30%] left-[5%] w-24 h-24 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm rotate-12"></div>
+</div>
+</main>
+<!-- Background Imagery for context (Hidden but present for prompt) -->
+<div class="hidden">
+<img data-alt="A high-angle cinematic landscape of a modern, organized mining site in the lush highlands of Bandung. The image features terraced green hills and clean industrial pathways illuminated by the golden hour sun. The overall aesthetic is one of ecological responsibility and high-tech efficiency, with a soft atmosphere that blends natural emerald greens with professional industrial tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWlkgHQCjoiYaPlZrLDT4BWwSvVT0E0DC_u8CwH9EEVVSEmHp_xt-QabF_9Vk3IQPlJRbpPKt13JdNQQ7UvA96TNH1qaPba0pH5XfpJebGxvVckY66QbnOYluZdn05mmUTUBL3t23vy_zaWUx2uSKQhEcvWppIKEn2KtGyolGNjBZ61K6ZizV7xePewil5Mk7mUUpRvc5X3FxdjSTotOgZY-C4J-13gihXIE7cVcv_PLBAcisnaTBXXOX-xZEySiizCMsMAlyi4k"/>
+</div>
+</body></html>

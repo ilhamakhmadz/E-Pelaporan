@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top right, rgba(117, 251, 187, 0.05), transparent 400px),
+                        radial-gradient(circle at bottom left, rgba(32, 138, 138, 0.05), transparent 400px),
+                        #f9f9ff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .timeline-line {
+            width: 2px;
+            background: linear-gradient(to bottom, #006767, #75fbbb);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#111c2d",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f0f3ff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#75fbbb",
+                      "primary": "#006767",
+                      "surface": "#f9f9ff",
+                      "tertiary-fixed": "#e0e3e5",
+                      "surface-container-highest": "#d8e3fb",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "inverse-primary": "#78d6d5",
+                      "surface-dim": "#cfdaf2",
+                      "surface-bright": "#f9f9ff",
+                      "primary-fixed": "#95f2f1",
+                      "tertiary-container": "#727577",
+                      "primary-container": "#0f8282",
+                      "on-secondary-fixed-variant": "#005235",
+                      "outline": "#6e7979",
+                      "surface-variant": "#d8e3fb",
+                      "secondary-fixed": "#75fbbb",
+                      "on-surface": "#111c2d",
+                      "outline-variant": "#bdc9c8",
+                      "on-primary-fixed-variant": "#004f50",
+                      "on-secondary-container": "#00734c",
+                      "tertiary": "#595c5e",
+                      "inverse-on-surface": "#ecf1ff",
+                      "inverse-surface": "#263143",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#dee8ff",
+                      "on-surface-variant": "#3e4949",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#55dea1",
+                      "background": "#f9f9ff",
+                      "on-primary-container": "#f3fffe",
+                      "secondary": "#006c47",
+                      "primary-fixed-dim": "#78d6d5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed": "#002020",
+                      "surface-container": "#e7eeff",
+                      "on-tertiary-container": "#fbfdff",
+                      "on-tertiary-fixed": "#191c1e",
+                      "surface-tint": "#006a6a",
+                      "on-secondary-fixed": "#002113"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "container-padding": "20px",
+                      "sm": "12px",
+                      "md": "16px",
+                      "base": "4px",
+                      "xs": "8px",
+                      "lg": "24px",
+                      "grid-columns": "4"
+              },
+              "fontFamily": {
+                      "label-caps": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "title-sm": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-32">
+<!-- Top AppBar -->
+<header class="fixed top-0 z-50 w-full bg-surface/60 backdrop-blur-xl border-b border-white/20 shadow-[0_8px_32px_0_rgba(32,138,138,0.1)] flex justify-between items-center px-container-padding py-md">
+<div class="flex items-center gap-md">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Detail Pelaporan</h1>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="Petugas" data-alt="A professional portrait of a mining inspector wearing a clean white industrial helmet and a smart navy blue uniform. The lighting is bright and airy with a minimalist studio background that reflects the clean, smart-governance aesthetic of Bandung Regency's digital infrastructure. Soft emerald green accents highlight the professional and trustworthy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeyORc4jNbHVe8q-RGRnvcTvpYNT0ClOoEOAGK82VLXLbtB5urySS0Pspeyz8uLFgCu7N3pfqBrGY5VnI4ftn57y1C_4uCx4YdrYAKGz0IzGDWZ-Vs0fR0VMj16wR_qiPFakXV6LBJ60FX8Ds5XcVIqZaDpbskRYi66iULIwP7i0B5adL5tvTUiR6goQ4BltlDFVZjREytPPZpkCmSEOPsW4Mvp6llThsccSAVhADlSgTIbQCExJKZECbdRILx8-L20DsCOfJV6NY"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 px-container-padding max-w-4xl mx-auto space-y-lg">
+<!-- Status & Title Card -->
+<section class="glass-panel rounded-2xl p-lg shadow-[0_20px_50px_rgba(32,138,138,0.08)]">
+<div class="flex justify-between items-start mb-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase">ID LAPORAN: #ID-92834-2024</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-base">Inspeksi Lahan Sektor A-12</h2>
+</div>
+<div class="bg-secondary-container/20 border border-secondary text-secondary px-4 py-1.5 rounded-full font-label-caps text-label-caps flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    PROSES PENINJAUAN
+                </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Laporan peninjauan rutin terkait kestabilan lereng di area tambang terbuka Sektor A-12. Ditemukan rekahan minor pada dinding barat yang memerlukan pemantauan lebih lanjut dalam 24 jam ke depan.
+            </p>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Left Column: Media & Location -->
+<div class="space-y-lg">
+<!-- Location Section -->
+<div class="glass-panel rounded-2xl p-lg shadow-[0_20px_50px_rgba(32,138,138,0.05)]">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Lokasi Koordinat</h3>
+</div>
+<div class="rounded-xl overflow-hidden h-48 relative border border-white/40">
+<img class="w-full h-full object-cover" data-alt="A high-resolution satellite map view of a mining facility in Bandung Regency. The imagery shows detailed industrial topography with emerald-green vegetation surrounding organized excavation sites. The map is presented in a clean, professional layout with subtle white-stroked interface elements that emphasize modern geospatial technology and smart city infrastructure." data-location="Bandung Regency" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfh533rcjNNl9SP4eS61BrgYynVGW92tjqcMyzY2kQStoygEv408CeLQ_081cwWgCu7_fF30a-iLD25lSgpnu8xLvU83Dt3_AsEc0COqhjoFeWFPe-nQbSuFDtXZmpVwwWZwolHYJQlKBBwZI-1x2GkaZtfCglojnSJZ4fyrxxZHuOxILNQy3Zg0Xuu-Hc_Vs_MUXrKLN33IBuAj3BqLjm1LfC4krDVDcQZ6jf9T8V095OHNtTrC_tFgqmq_aSgx8O9SHEBeYXDGs"/>
+<div class="absolute bottom-3 left-3 bg-on-background/80 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-md">
+                            -7.0234, 107.5197
+                        </div>
+</div>
+</div>
+<!-- Photos Section -->
+<div class="glass-panel rounded-2xl p-lg shadow-[0_20px_50px_rgba(32,138,138,0.05)]">
+<div class="flex items-center justify-between mb-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary">photo_library</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Lampiran Foto</h3>
+</div>
+<span class="font-label-caps text-label-caps text-primary">3 FOTO</span>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<div class="aspect-square rounded-xl overflow-hidden border border-white/40 group relative">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A detailed wide-angle shot of an open-pit mine site during sunset. The landscape is dominated by terraced excavation walls and heavy industrial machinery. The lighting is warm and natural, creating long shadows that emphasize the texture of the earth. The overall aesthetic is clean, professional, and authoritative, reflecting a high-tech mining oversight operation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAED4wRLi2JXkMLu6TqDki7_E71S-nbLLalUZstXRuu1--Z7TGzikz56EXQYnOXirMewYGSBlVPQQuvF40bsooWFLeeBd0oqYTchItr7UcowDgAOTncJClAQtyCCDZBcUqaciUNvtZ3VOldjSlJC5YWnOD2aPXwQ5kta-D8ivEOJB8_bFxEO4xA0dyNLZ2hI0AMvL-xoag9nB44OSdom8CctsXZtjk2yPgNObK5W4b6mtKlSRsWLXLf0gslWDjrhCxDv5v_D9kFUkc"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">zoom_in</span>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-sm">
+<div class="rounded-xl overflow-hidden border border-white/40 group relative">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A close-up photograph of a geological fissure in a mining wall. The image focus is sharp on the structural details of the rock, showing signs of monitoring equipment nearby. The lighting is high-key and surgical, conveying a sense of transparency and data-driven safety inspections in a modern industrial environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkkq_2zIfSe_uIKwTnv54dr7uOGUe6j4JZniWqqCAwezrDIRlmQF3e74TSniZCDQScWYyukxRYffU_n0qifwGPeRcqEPP5BXzW6VPz_0xlgqiGRk6-z7VnrFzp9N0szWW08VzVRn0i2i3RgkIu-C1CWW_6wIBTu164_pTn_RZLIt7sYvotBPHefbf_unQA2QFwNg7QyWPYyY6XlNlfRjYBMp2X3PWCbdyzmR1iCKjjAlNGfzVlhlqH82sNwnOX2QH9Bg_AN5_ydP4"/>
+</div>
+<div class="bg-primary/5 rounded-xl border border-dashed border-primary/30 flex flex-col items-center justify-center gap-xs cursor-pointer hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">add_a_photo</span>
+<span class="font-label-caps text-label-caps text-primary">TAMBAH</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline & Form -->
+<div class="space-y-lg">
+<!-- Timeline Section -->
+<div class="glass-panel rounded-2xl p-lg shadow-[0_20px_50px_rgba(32,138,138,0.05)]">
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-primary">account_tree</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Progres Laporan</h3>
+</div>
+<div class="relative space-y-8 pl-8">
+<div class="absolute left-[11px] top-1 bottom-1 timeline-line opacity-20 rounded-full"></div>
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10"></div>
+<div>
+<h4 class="font-title-sm text-[14px] text-on-surface">Laporan Diterima</h4>
+<p class="font-label-caps text-[11px] text-outline mt-0.5">14 OKT 2024 • 09:12 WIB</p>
+<p class="font-body-md text-[13px] text-on-surface-variant mt-1">Sistem otomatis mencatat laporan inspeksi awal.</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[27px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/10"></div>
+<div>
+<h4 class="font-title-sm text-[14px] text-on-surface">Verifikasi Lapangan</h4>
+<p class="font-label-caps text-[11px] text-outline mt-0.5">14 OKT 2024 • 11:30 WIB</p>
+<p class="font-body-md text-[13px] text-on-surface-variant mt-1">Petugas Hendra Pratama mengonfirmasi titik koordinat.</p>
+</div>
+</div>
+<!-- Timeline Item 3 (Inactive) -->
+<div class="relative opacity-50">
+<div class="absolute -left-[27px] top-0 w-4 h-4 rounded-full bg-surface-container-highest border-2 border-outline-variant"></div>
+<div>
+<h4 class="font-title-sm text-[14px] text-on-surface">Persetujuan Teknis</h4>
+<p class="font-label-caps text-[11px] text-outline mt-0.5">ESTIMASI: 15 OKT 2024</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Form -->
+<div class="glass-panel rounded-2xl p-lg shadow-[0_20px_50px_rgba(32,138,138,0.05)]">
+<div class="flex items-center gap-sm mb-lg">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Tindakan Lanjutan</h3>
+</div>
+<form class="space-y-md">
+<div class="space-y-xs">
+<label class="font-label-caps text-label-caps text-outline ml-1">CATATAN PEMERIKSA</label>
+<textarea class="w-full bg-white/40 border border-outline-variant rounded-xl p-md font-body-md text-body-md focus:ring-primary focus:border-primary min-h-[100px] transition-all" placeholder="Masukkan detail tindak lanjut..."></textarea>
+</div>
+<div class="flex gap-sm">
+<button class="flex-1 bg-surface-container-highest text-on-surface-variant py-3 rounded-xl font-title-sm text-[15px] hover:bg-surface-variant transition-colors active:scale-95" type="button">
+                                Draft
+                            </button>
+<button class="flex-[2] bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-xl font-title-sm text-[15px] shadow-lg shadow-primary/20 hover:brightness-110 transition-all active:scale-95" type="button">
+                                Kirim Update
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-6 left-6 right-6 z-50 flex justify-around items-center h-20 bg-white/10 backdrop-blur-2xl border border-white/30 rounded-full shadow-[0_20px_50px_rgba(32,138,138,0.2)]">
+<!-- Beranda -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/80 px-5 py-2 hover:bg-white/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-label-caps text-label-caps">Beranda</span>
+</a>
+<!-- Laporan (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container/80 text-on-primary-container rounded-full px-5 py-2 shadow-[0_0_15px_rgba(117,251,187,0.4)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-label-caps text-label-caps">Laporan</span>
+</a>
+<!-- Peta -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/80 px-5 py-2 hover:bg-white/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">map</span>
+<span class="font-label-caps text-label-caps">Peta</span>
+</a>
+<!-- Profil -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/80 px-5 py-2 hover:bg-white/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-caps text-label-caps">Profil</span>
+</a>
+</nav>
+</body></html>

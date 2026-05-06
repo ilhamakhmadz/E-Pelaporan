@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9ff;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c10-5 20-5 30 0s20 5 30 0M10 20c10-5 20-5 30 0s20 5 30 0M10 30c10-5 20-5 30 0s20 5 30 0M10 40c10-5 20-5 30 0s20 5 30 0' fill='none' stroke='%23006767' stroke-width='0.5' stroke-opacity='0.05'/%3E%3C/svg%3E");
+        }
+        .glass-card {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#111c2d",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f0f3ff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#75fbbb",
+                        "primary": "#006767",
+                        "surface": "#f9f9ff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-container-highest": "#d8e3fb",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "inverse-primary": "#78d6d5",
+                        "surface-dim": "#cfdaf2",
+                        "surface-bright": "#f9f9ff",
+                        "primary-fixed": "#95f2f1",
+                        "tertiary-container": "#727577",
+                        "primary-container": "#0f8282",
+                        "on-secondary-fixed-variant": "#005235",
+                        "outline": "#6e7979",
+                        "surface-variant": "#d8e3fb",
+                        "secondary-fixed": "#75fbbb",
+                        "on-surface": "#111c2d",
+                        "outline-variant": "#bdc9c8",
+                        "on-primary-fixed-variant": "#004f50",
+                        "on-secondary-container": "#00734c",
+                        "tertiary": "#595c5e",
+                        "inverse-on-surface": "#ecf1ff",
+                        "inverse-surface": "#263143",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#dee8ff",
+                        "on-surface-variant": "#3e4949",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#55dea1",
+                        "background": "#f9f9ff",
+                        "on-primary-container": "#f3fffe",
+                        "secondary": "#006c47",
+                        "primary-fixed-dim": "#78d6d5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#002020",
+                        "surface-container": "#e7eeff",
+                        "on-tertiary-container": "#fbfdff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-tint": "#006a6a",
+                        "on-secondary-fixed": "#002113"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "container-padding": "20px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "grid-columns": "4"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "title-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-32">
+<!-- Top AppBar -->
+<header class="docked full-width top-0 z-40 bg-surface/60 dark:bg-on-background/60 backdrop-blur-xl border-b border-white/20 shadow-[0_8px_32px_0_rgba(32,138,138,0.1)] flex justify-between items-center px-container-padding py-md w-full sticky">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged male mining inspector with a confident and trustworthy expression. He is wearing a clean, modern administrative uniform suitable for a high-tech government role. The background is a blurred high-end office with soft turquoise lighting and professional glass elements, maintaining a pristine and authoritative smart-city aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkS2KlatuIjtO9rfQ84Xah9tMQuhaG5v3ILV12NSaTIBqZ0CaqtfmJXBormip088hY4PO8bbGG-vYZ_gZtzXSbQFO_um4nZGjSQbNXKjY_gbBLKY6LINGXjNFQGABwB4J5OTrI7Zdj-NctmE2gl18GhcgH8Y-AD44f36VSEWfGjMH3n4uMm51i2BAIEVfWn1OSr3X0ReNU6LmUOr5f0Zfhbc2fPvmcpkLMPFAJOANRVXZLL8zzF43STPN3g6uATpJ7bJyfNnkhh7o"/>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed tracking-tight">Halo, Petugas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant/70 -mt-1">Pemeriksaan Wilayah Bandung</p>
+</div>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full text-primary hover:bg-white/10 transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="px-container-padding mt-lg">
+<!-- Welcome Hero Section -->
+<section class="mb-xl">
+<h2 class="font-display-lg text-display-lg text-on-background">Selamat Datang</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Pantau aktivitas pertambangan dan kelola perizinan secara transparan untuk masa depan lingkungan yang lebih baik.</p>
+</section>
+<!-- Main Menu Cards (Bento Style Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1: IUP -->
+<div class="relative overflow-hidden glass-card rounded-2xl p-lg bg-gradient-to-br from-primary to-[#0f8282] text-white shadow-[0_20px_40px_-15px_rgba(0,103,103,0.3)] flex flex-col group">
+<div class="flex justify-between items-start mb-xl">
+<div class="bg-white/20 p-md rounded-xl backdrop-blur-md">
+<span class="material-symbols-outlined text-4xl" data-icon="factory">factory</span>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-white/70">AKTIF</p>
+<p class="font-display-lg text-[28px] font-bold">124</p>
+</div>
+</div>
+<h3 class="font-title-sm text-title-sm mb-xs">Izin Usaha Pertambangan</h3>
+<p class="text-sm text-white/80 mb-lg">Kelola izin eksplorasi dan operasi produksi mineral serta batubara.</p>
+<button class="mt-auto py-md px-lg bg-white/20 hover:bg-white/30 transition-all rounded-full font-label-caps text-label-caps flex items-center justify-center gap-xs">
+                    LIHAT DETAIL <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2: SIPB -->
+<div class="relative overflow-hidden glass-card rounded-2xl p-lg bg-gradient-to-br from-[#75fbbb] to-[#208a8a] text-on-secondary-container shadow-[0_20px_40px_-15px_rgba(32,138,138,0.2)] flex flex-col group">
+<div class="flex justify-between items-start mb-xl">
+<div class="bg-white/40 p-md rounded-xl backdrop-blur-md">
+<span class="material-symbols-outlined text-4xl" data-icon="construction">construction</span>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-on-secondary-container/60">PEMOHON</p>
+<p class="font-display-lg text-[28px] font-bold">45</p>
+</div>
+</div>
+<h3 class="font-title-sm text-title-sm mb-xs">Surat Izin Penambangan Batu</h3>
+<p class="text-sm text-on-secondary-container/80 mb-lg">Pengawasan khusus penambangan batuan skala kecil dan komoditas tertentu.</p>
+<button class="mt-auto py-md px-lg bg-primary/10 hover:bg-primary/20 transition-all rounded-full font-label-caps text-label-caps flex items-center justify-center gap-xs">
+                    PROSES IZIN <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card 3: PETI -->
+<div class="relative overflow-hidden glass-card rounded-2xl p-lg bg-gradient-to-br from-[#ff6b6b] to-[#ba1a1a] text-white shadow-[0_20px_40px_-15px_rgba(186,26,26,0.3)] flex flex-col group">
+<div class="flex justify-between items-start mb-xl">
+<div class="bg-white/20 p-md rounded-xl backdrop-blur-md">
+<span class="material-symbols-outlined text-4xl" data-icon="warning" data-weight="fill" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-white/70">WASPADA</p>
+<p class="font-display-lg text-[28px] font-bold">12</p>
+</div>
+</div>
+<h3 class="font-title-sm text-title-sm mb-xs">Pertambangan Tanpa Izin</h3>
+<p class="text-sm text-white/80 mb-lg">Laporan aktivitas penambangan ilegal dan pemantauan titik panas lapangan.</p>
+<button class="mt-auto py-md px-lg bg-white/20 hover:bg-white/30 transition-all rounded-full font-label-caps text-label-caps flex items-center justify-center gap-xs">
+                    BUAT LAPORAN <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity Section (Secondary Layout) -->
+<section class="mt-xl">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-title-sm text-title-sm text-on-background">Aktivitas Terkini</h2>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-xs">LIHAT SEMUA <span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+<div class="glass-card rounded-2xl overflow-hidden bg-white/40">
+<div class="p-md flex items-center gap-md border-b border-white/20 hover:bg-white/30 transition-colors">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<h4 class="font-title-sm text-[16px] text-on-surface">Laporan Verifikasi PT. Maju Jaya</h4>
+<p class="text-sm text-on-surface-variant">2 jam yang lalu • Inspeksi Lapangan</p>
+</div>
+<span class="px-xs py-1 rounded bg-secondary-container/50 text-on-secondary-container text-[10px] font-bold">SELESAI</span>
+</div>
+<div class="p-md flex items-center gap-md border-b border-white/20 hover:bg-white/30 transition-colors">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div class="flex-1">
+<h4 class="font-title-sm text-[16px] text-on-surface">Deteksi Titik PETI Baru</h4>
+<p class="text-sm text-on-surface-variant">5 jam yang lalu • Koordinat: -7.021, 107.514</p>
+</div>
+<span class="px-xs py-1 rounded bg-error-container/50 text-on-error-container text-[10px] font-bold">KRITIS</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-6 right-6 z-50 flex justify-around items-center h-20 bg-white/10 backdrop-blur-2xl rounded-full border border-white/30 shadow-[0_20px_50px_rgba(32,138,138,0.2)]">
+<a class="flex flex-col items-center justify-center bg-primary-container/80 text-on-primary-container rounded-full px-5 py-2 shadow-[0_0_15px_rgba(117,251,187,0.4)] scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-label-caps text-[10px] mt-0.5">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/80 px-5 py-2 hover:bg-white/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-caps text-[10px] mt-0.5">Laporan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/80 px-5 py-2 hover:bg-white/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-label-caps text-[10px] mt-0.5">Peta</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/80 px-5 py-2 hover:bg-white/20 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-[10px] mt-0.5">Profil</span>
+</a>
+</nav>
+<!-- Floating Action Button (Only on Home) -->
+<button class="fixed bottom-32 right-8 w-16 h-16 bg-primary text-white rounded-2xl shadow-xl flex items-center justify-center transition-transform hover:scale-105 active:scale-95 z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>
